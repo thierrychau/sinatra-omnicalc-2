@@ -21,7 +21,7 @@ get("/subtract") do
   erb(:sub_form)
 end
 
-get("/wizard_substract") do
+get("/wizard_subtract") do
   @first_num = params.fetch("first_number").to_f
   @second_num = params.fetch("second_number").to_f
 
@@ -46,5 +46,9 @@ get("/divide") do
 end
 
 get("/wizard_divide") do
+  @first_num = params.fetch("first_number").to_f
+  @second_num = params.fetch("second_number").to_f
+
+  @result =  @first_num / @second_num
   erb(:div_result)
 end
