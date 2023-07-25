@@ -21,10 +21,11 @@ get("/subtract") do
   erb(:sub_form)
 end
 
-get("/wizard_subtract") do
-  @first_num = params.fetch("first_num").to_f
-  @second_num = params.fetch("second_num").to_f
+get("/wizard_substract") do
+  @first_num = params.fetch("first_number").to_f
+  @second_num = params.fetch("second_number").to_f
 
+  @result = @second_num - @first_num
   erb(:sub_result)
 end
 
